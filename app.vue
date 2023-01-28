@@ -38,17 +38,19 @@
 </div>
     <hr />
     <span>Your output:</span>
-    <div class="myoutput">
-      <div v-for="word in (message.split(' '))"> 
-        {{ `<` + tag }} class="{{ myclass }}"
-        
-        <span v-if=myid>id="{{ myid }}"</span>
-        >
-        {{ word }}
-        {{ `</` + tag }}>
 
+    <code>
+      <div class="myoutput">
+        <div v-for="word in (message.split(' '))"> 
+          {{ `<` + tag }} class="{{ myclass }}"
+          
+          <span v-if=myid>id="{{ myid }}"</span>
+          >
+          {{ word }}
+          {{ `</` + tag }}>
+        </div>
       </div>
-    </div>
+    </code>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
 h1 {
@@ -27,7 +27,7 @@ textarea {
   grid-template-columns: auto auto;
 }
 .grid-item {
-  height: //Whatever you want them to be
+  height: auto;
 ;
 }
 
@@ -38,4 +38,16 @@ textarea {
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
+}
+
+/* Code */
+
+code > * {
+  font-family: 'Courier New', Courier, monospace !important;
+  font-size: inherit !important;
+  background: #ffeff0;
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  padding: 0.1rem 0.3rem 0.2rem;
+  border-radius: 0.2rem;
 }
