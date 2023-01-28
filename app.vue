@@ -4,11 +4,16 @@
     <p>Your Stuff:</p>
     <textarea v-model="message" placeholder="your text"  />
     <br />
+
+<div class="grid-container">
+ <div class="grid-item">
     Class: <input v-model="myclass" />
-    <br />
+ </div>
+ <div class="grid-item">
     ID (incremented): <input v-model="myid" />
-    <br />
-    <span>Tag Type:</span>
+ </div>
+ <div class="grid-item">
+     <span>Tag Type:</span>
     <br />
     <select name="tags" id="tag-select" v-model="tag">
         <option value="">--Please choose an option--</option>
@@ -16,7 +21,21 @@
         <option value="p">p</option>
         <option value="span">span</option>
     </select>
-    <br />
+ </div>
+ <div class="grid-item">
+ <label class="form-control">
+  <input type="radio" name="radio" />
+  Wrap Words
+</label>
+
+<label class="form-control">
+  <input type="radio" name="radio" />
+  Wrap Letters
+</label>
+ 
+ </div>
+
+</div>
     <hr />
     <span>Your output:</span>
     <div class="myoutput">

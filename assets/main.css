@@ -21,3 +21,21 @@ textarea {
   box-sizing: border-box;
   border-radius: 5px;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.grid-item {
+  height: //Whatever you want them to be
+;
+}
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 2;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
