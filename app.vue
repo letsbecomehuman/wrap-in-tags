@@ -63,10 +63,11 @@
     </div>
       </div>
     </code>
+    <button @click="copy">Copy</button>
   </div>
   <div>
     <h2>GSAP Code</h2>
-    <span>Coming soon!!</span>
+    <span>Coming soon!</span>
   </div>
 </template>
 
