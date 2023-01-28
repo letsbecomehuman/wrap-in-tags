@@ -1,7 +1,7 @@
 <template>
   <div style="padding: 10px;">
-  <h1>Wrap in Tags App</h1>
-  <h2>Text to Wrap</h2>
+  <header />
+test
     <p>Your Stuff:</p>
     <textarea v-model="message" placeholder="your text"  />
     <br />
