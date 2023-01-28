@@ -1,5 +1,6 @@
 <template>
   <div style="padding: 10px;">
+  <h1>Wrap in Tags App</h1>
     <p>Your Stuff:</p>
     <textarea v-model="message" placeholder="your text"  />
     <br />
@@ -26,6 +27,7 @@
         >
         {{ word }}
         {{ `</` + tag }}>
+
       </div>
     </div>
   </div>
@@ -36,22 +38,3 @@
   const myclass = ''
   const message = ''
 </script>
-
-<style scoped>
-
-hr {
-  margin: 20px 0px;
-}
-.myoutput {
-  padding: 10px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-</style>
