@@ -16,6 +16,9 @@
     <br />
     <select name="tags" id="tag-select" v-model="tag">
         <option value="">--Please choose an option--</option>
+        <option value="div">H1</option>
+        <option value="div">H2</option>
+        <option value="div">H3</option>
         <option value="div">div</option>
         <option value="p">p</option>
         <option value="span">span</option>
