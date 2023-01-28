@@ -1,6 +1,7 @@
 <template>
   <div style="padding: 10px;">
   <h1>Wrap in Tags App</h1>
+  <h2>Text to Wrap</h2>
     <p>Your Stuff:</p>
     <textarea v-model="message" placeholder="your text"  />
     <br />
@@ -36,8 +37,7 @@
  </div>
 
 </div>
-    <hr />
-    <span>Your output:</span>
+    <h2>Your Output</h2>
 
     <code>
       <div class="myoutput">
@@ -51,6 +51,11 @@
         </div>
       </div>
     </code>
+  </div>
+
+  <div>
+  <h2>GSAP Code</h2>
+  <span>Coming soon</span>
   </div>
 </template>
 
