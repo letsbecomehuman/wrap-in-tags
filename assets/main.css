@@ -1,14 +1,17 @@
-* {
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+h1,
+h2,
+h3,
+h5,
+span,
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
   text-transform: uppercase;
 }
 
-hr {
-  margin: 20px 0px;
-}
 .myoutput {
   padding: 10px;
 }
@@ -25,10 +28,11 @@ textarea {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
+  gap: 1rem;
 }
+
 .grid-item {
   height: auto;
-;
 }
 
 .form-control {

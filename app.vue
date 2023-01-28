@@ -1,11 +1,9 @@
 <template>
   <div style="padding: 10px;">
-  <header />
-test
+  <theHeader />
     <p>Your Stuff:</p>
     <textarea v-model="message" placeholder="your text"  />
     <br />
-
 <div class="grid-container">
  <div class="grid-item">
     Class: <input v-model="myclass" />
@@ -24,38 +22,51 @@ test
     </select>
  </div>
  <div class="grid-item">
- <label class="form-control">
-  <input type="radio" name="radio" />
-  Wrap Words
-</label>
-
-<label class="form-control">
-  <input type="radio" name="radio" />
-  Wrap Letters
-</label>
- 
+    <label class="form-control">
+      <input type="radio" name="radio" value="words" v-model="mode"/>
+      Wrap Words
+    </label>
+    <label class="form-control">
+      <input type="radio" name="radio" value="letters" v-model="mode" />
+      Wrap Letters
+    </label>
  </div>
-
 </div>
-    <h2>Your Output</h2>
-
+    <h2>Your Output!
+    
+    
+    </h2>
     <code>
       <div class="myoutput">
-        <div v-for="word in (message.split(' '))"> 
-          {{ `<` + tag }} class="{{ myclass }}"
-          
-          <span v-if=myid>id="{{ myid }}"</span>
-          >
-          {{ word }}
-          {{ `</` + tag }}>
-        </div>
+        <div v-if="mode === 'words'">
+          <div v-for="word in (message.split(' '))"> 
+            {{ `<` + tag }} class="{{ myclass }}"
+            
+            <span v-if=myid>id="{{ myid }}"</span>
+            >
+            {{ word }}
+            {{ `</` + tag }}>
+          </div>
+          </div>
+    <div v-else-if="mode === 'letters'">
+    
+              <div v-for="word in (message.split(''))"> 
+            {{ `<` + tag }} class="{{ myclass }}"
+            
+            <span v-if=myid>id="{{ myid }}"</span>
+            >
+            {{ word }}
+            {{ `</` + tag }}>
+          </div>
+    
+    
+    </div>
       </div>
     </code>
   </div>
-
   <div>
-  <h2>GSAP Code</h2>
-  <span>Coming soon</span>
+    <h2>GSAP Code</h2>
+    <span>Coming soon!!</span>
   </div>
 </template>
 
@@ -63,4 +74,5 @@ test
   const tag = ''
   const myclass = ''
   const message = ''
+  const mode = ''
 </script>
