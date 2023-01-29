@@ -35,14 +35,11 @@
     </label>
  </div>
 </div>
-    <h2>Your Output!
-    
-    
-    </h2>
+    <h2>Your Output</h2>
     <code>
       <div class="myoutput">
-        <div v-if="mode === 'words'">
-          <div v-for="word in (message.split(' '))"> 
+        <div v-if="mode === 'words'" ref="message" >
+          <div v-for="word in (message.split(' '))" > 
             {{ `<` + tag }} class="{{ myclass }}"
             
             <span v-if=myid>id="{{ myid }}"</span>
@@ -51,7 +48,7 @@
             {{ `</` + tag }}>
           </div>
           </div>
-    <div v-else-if="mode === 'letters'">
+    <div v-else-if="mode === 'letters'" ref="myoutput">
     
               <div v-for="word in (message.split(''))"> 
             {{ `<` + tag }} class="{{ myclass }}"
@@ -61,12 +58,12 @@
             {{ word }}
             {{ `</` + tag }}>
           </div>
-    
+
     
     </div>
       </div>
     </code>
-    <button @click="copy">Copy</button>
+    <button @click="copyTextNoInput()" style="cursor: not-allowed; pointer-events: none;">Copy</button>
   </div>
   <div>
     <h2>GSAP Code</h2>
@@ -79,4 +76,14 @@
   const myclass = ''
   const message = ''
   const mode = ''
+
+  function copyTextNoInput() {
+      const storage = document.createElement('textarea');
+      storage.value = this.$refs.message.innerHTML;
+      this.$refs.reference.appendChild(storage);
+      storage.select();
+      storage.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+      this.$refs.reference.removeChild(storage);
+    }
 </script>
