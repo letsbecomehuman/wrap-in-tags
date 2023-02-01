@@ -6,7 +6,3 @@ Created to help with multiple word animations where each word needs to be wrappe
 - Create option to wrap letters individually in addition to words.
 - Automatically generate GSAP code for simple animations.
 - Add ability to increment ID by number.
-
----
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/wrap-in-tags)
-
