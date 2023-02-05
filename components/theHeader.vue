@@ -1,3 +1,3 @@
 <template>
-  <h1>Wrap Stuff in Tags</h1>
+  <h1 class="text-3xl font-bold py-2">WRAP IN TAGS</h1>
 </template>

@@ -1,8 +1,8 @@
 <template>
-  <div style="padding: 10px;">
+  <div class="bg-slate-900 min-h-full h-screen text-slate-100 p-4">
   <theHeader />
     <p>Your Stuff:</p>
-    <textarea v-model="message" placeholder="your text"  />
+    <textarea v-model="message" placeholder="your text" />
     <br />
 <div class="grid-container">
  <div class="grid-item">
@@ -68,6 +68,7 @@
   <div>
     <h2>GSAP Code</h2>
     <span>Coming soon!</span>
+
   </div>
 </template>
 
