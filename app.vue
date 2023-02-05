@@ -1,7 +1,7 @@
 <template>
   <div class="bg-slate-900 min-h-full h-screen text-slate-100 p-4">
   <theHeader />
-    <p>Your Stuff:</p>
+    <p class="text-lg">Paste your text</p>
     <textarea v-model="message" placeholder="your text" />
     <br />
 <div class="grid-container">
@@ -20,6 +20,7 @@
         <option value="div">H2</option>
         <option value="div">H3</option>
         <option value="div">div</option>
+    
         <option value="p">p</option>
         <option value="span">span</option>
     </select>
