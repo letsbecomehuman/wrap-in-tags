@@ -16,18 +16,21 @@ h1 {
   text-transform: uppercase;
 }
 
+label {
+  font-weight: bold;
+}
 .myoutput {
   padding: 10px;
 }
 
 input,
+select,
 textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 0px;
-  color: black;
 }
 
 button {

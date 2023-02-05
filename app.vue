@@ -1,31 +1,30 @@
 <template>
-  <div class="bg-slate-900 min-h-full h-screen text-slate-100 p-4">
+  <div class="bg-slate-900 min-h-full h-screen text-slate-100">
   <theHeader />
-    <p class="text-lg">Paste your text</p>
-    <textarea v-model="message" placeholder="your text" />
-    <br />
-<div class="grid-container">
- <div class="grid-item">
-    Class: <input v-model="myclass" />
- </div>
- <div class="grid-item">
-    ID (incremented): <input v-model="myid" />
- </div>
- <div class="grid-item">
-     <span>Tag Type:</span>
-    <br />
-    <select name="tags" id="tag-select" v-model="tag">
+  <label class="text-lg" for="theText">Paste your text</label>
+  <textarea v-model="message" placeholder="your text" class="bg-stone-700" name="theText"/>
+  <div class="grid-container">
+  <div class="grid-item">
+    <label for="theClass">Class</label> 
+    <input v-model="myclass" name="theClass" class="bg-stone-700" />
+  </div>
+  <div class="grid-item">
+    <label for="theID">ID (incremented)</label> 
+    <input v-model="myid" class="bg-stone-700" name="theID" />
+  </div>
+  <div class="grid-item">
+    <label for="theTag">Tag Type</label>
+    <select name="theTag" id="tag-select" v-model="tag" class="bg-stone-700">
         <option value="">--Please choose an option--</option>
         <option value="div">H1</option>
         <option value="div">H2</option>
         <option value="div">H3</option>
         <option value="div">div</option>
-    
         <option value="p">p</option>
         <option value="span">span</option>
     </select>
- </div>
- <div class="grid-item">
+  </div>
+  <div class="grid-item">
     <label class="form-control">
       <input type="radio" name="radio" value="words" v-model="mode"/>
       Wrap Words
@@ -34,42 +33,38 @@
       <input type="radio" name="radio" value="letters" v-model="mode" />
       Wrap Letters
     </label>
- </div>
-</div>
-    <h2>Your Output</h2>
-    <code>
-      <div class="myoutput">
+  </div>
+  </div>
+  <div>
+    <label for="theOutput">Your Output</label>
+    <code name="theOutput">
+      <div class="myoutput bg-stone-700">
         <div v-if="mode === 'words'" ref="message" >
           <div v-for="word in (message.split(' '))" > 
             {{ `<` + tag }} class="{{ myclass }}"
-            
             <span v-if=myid>id="{{ myid }}"</span>
             >
             {{ word }}
             {{ `</` + tag }}>
           </div>
           </div>
-    <div v-else-if="mode === 'letters'" ref="myoutput">
-    
+          <div v-else-if="mode === 'letters'" ref="myoutput">
               <div v-for="word in (message.split(''))"> 
             {{ `<` + tag }} class="{{ myclass }}"
-            
             <span v-if=myid>id="{{ myid }}"</span>
             >
             {{ word }}
             {{ `</` + tag }}>
           </div>
-
-    
-    </div>
+      </div>
       </div>
     </code>
-    <button @click="copyTextNoInput()" style="cursor: not-allowed; pointer-events: none;">Copy</button>
+  <theButton />  
   </div>
-  <div>
-    <h2>GSAP Code</h2>
-    <span>Coming soon!</span>
-
+    <div>
+      <h2>GSAP Code</h2>
+      <span>Coming soon!</span>
+    </div>
   </div>
 </template>
 
