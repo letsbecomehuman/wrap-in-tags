@@ -6,7 +6,7 @@
   <textarea v-model="message" placeholder="your text" class="bg-stone-700" name="theText"/>
   <div class="grid-container">
   <div class="grid-item">
-    <label for="theClass">Class</label> 
+    <label for="theClass">Classss</label> 
     <input v-model="myclass" name="theClass" class="bg-stone-700" />
   </div>
   <div class="grid-item">
@@ -37,10 +37,10 @@
   </div>
   </div>
   <div class="pt-6">
-    <label for="theOutput">Your Output</label>
+    <label for="theOutput">Your Output!!!</label>
     <code name="theOutput">
       <div class="myoutput bg-stone-700">
-        <div v-if="mode === 'words'" ref="message" >
+        <div v-if="mode === 'words'" ref="message" id="copiedText" >
           <div v-for="word in (message.split(' '))" > 
             {{ `<` + tag }} class="{{ myclass }}"
             <span v-if=myid>id="{{ myid }}"</span>
@@ -49,7 +49,7 @@
             {{ `</` + tag }}>
           </div>
           </div>
-          <div v-else-if="mode === 'letters'" ref="myoutput">
+          <div v-else-if="mode === 'letters'" ref="myoutput" id="copiedTextOther">
               <div v-for="word in (message.split(''))"> 
             {{ `<` + tag }} class="{{ myclass }}"
             <span v-if=myid>id="{{ myid }}"</span>
@@ -59,14 +59,16 @@
           </div>
       </div>
       </div>
+ 
     </code>
+    </div>
   <theButton />  
-  </div>
     <div style="display: none;">
       <h2>GSAP Code</h2>
-      <span>Coming soon!</span>
+      <span>Coming soonish!</span>
     </div>
   </div>
+  
   </div>
 </template>
 
@@ -74,15 +76,5 @@
   const tag = ''
   const myclass = ''
   const message = ''
-  const mode = ''
-
-  function copyTextNoInput() {
-      const storage = document.createElement('textarea');
-      storage.value = this.$refs.message.innerHTML;
-      this.$refs.reference.appendChild(storage);
-      storage.select();
-      storage.setSelectionRange(0, 99999);
-      document.execCommand('copy');
-      this.$refs.reference.removeChild(storage);
-    }
+  const mode = 'words'
 </script>
