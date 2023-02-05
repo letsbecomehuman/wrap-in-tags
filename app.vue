@@ -1,6 +1,7 @@
 <template>
   <div class="bg-slate-900 min-h-full h-screen text-slate-100">
   <theHeader />
+  <div class="p-2">
   <label class="text-lg" for="theText">Paste your text</label>
   <textarea v-model="message" placeholder="your text" class="bg-stone-700" name="theText"/>
   <div class="grid-container">
@@ -35,7 +36,7 @@
     </label>
   </div>
   </div>
-  <div>
+  <div class="pt-6">
     <label for="theOutput">Your Output</label>
     <code name="theOutput">
       <div class="myoutput bg-stone-700">
@@ -61,10 +62,11 @@
     </code>
   <theButton />  
   </div>
-    <div>
+    <div style="display: none;">
       <h2>GSAP Code</h2>
       <span>Coming soon!</span>
     </div>
+  </div>
   </div>
 </template>
 
