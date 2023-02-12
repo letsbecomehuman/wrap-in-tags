@@ -4,6 +4,7 @@
   <theHeader />
   <div class="text-xl py-4">
   This is a description of the app.
+  <projectInfo />
   </div>
   <div>
     <label for="theText">Paste your text</label>
