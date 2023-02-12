@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='28.5' height='28.5' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 2%, 4%, 1)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(4.25,0)' stroke-linecap='square' stroke-width='1.5' stroke='hsla(259, 29%, 11%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+
 h1,
 h2,
 h3,

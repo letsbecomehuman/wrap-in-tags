@@ -1,11 +1,9 @@
 <template>
-<div class="w-full bg-slate-900 min-x-full h-screen p-4">
-  <div class=" text-slate-100 max-w-4xl mx-auto">
+<div class="w-full min-x-full h-screen">
+  <div class=" text-slate-100 mx-auto">
   <theHeader />
-  <div class="text-xl py-4">
-  This is a description of the app.
+  <div class="p-4 max-w-4xl mx-auto">
   <projectInfo />
-  </div>
   <div>
     <label for="theText">Paste your text</label>
     <textarea v-model="message" class="bg-stone-700 focus:border-solid focus:border-2 focus:border-teal-400 focus:ring-0 outline-none" name="theText"/>
@@ -73,6 +71,7 @@
       <h2>GSAP Code</h2>
       <span>Coming soonish!</span>
     </div>
+  </div>
   </div>
   </div>
   </div>
